@@ -7,7 +7,7 @@
         {
             "type": "solidity",
             "request": "launch",
-            "name": "Debug Solidity"
+            "name": "Debug Solidity (via contract entry point)"
         }
     ]
 }

@@ -5,11 +5,7 @@ contract ApprovalContract {
 
   address public sender;
   address public receiver;
-  address constant public approver = 0x498be7b9d58d7e7aaa70b0584659beda678f2d78;
-
-  function ApprovalContract() public {
-    // tbd
-  }
+  address constant public approver = 0x498Be7B9d58d7E7aAA70b0584659BEDa678F2D78;
 
   function deposit(address _receiver) external payable {
     require(msg.value > 0);
@@ -17,13 +13,13 @@ contract ApprovalContract {
     receiver = _receiver;
   }
 
-  funtion viewApprover() external pure returns(address) {
+  function viewApprover() external pure returns(address) {
     return(approver);
   }
 
   function approve() external {
     require(msg.sender == approver);
-    receiver.transfer(this.balance);
+    receiver.transfer(address(this).balance);
   }
 
 }
